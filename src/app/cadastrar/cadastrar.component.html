@@ -1,0 +1,25 @@
+<h1>Cadastro</h1>
+
+<router-outlet></router-outlet>
+
+<form #for ="ngForm" >
+
+<h3>E-mail</h3>
+<input type="text" #email ="ngModel" class="form-control" [(ngModel)]="usuario.email" name="email"  required/> 
+<br>
+<h3>User</h3>
+<input type="text" #nomeUsuario ="ngModel" class="form-control" [(ngModel)]="usuario.nome" name="nome"  required/> 
+<br>
+
+<h3>Senha</h3>
+
+<input type="password" pPassword senha="ngModel" class="form-control" [(ngModel)]="usuario.senha" name="senha"  required />
+</form>
+
+<br/>
+<br/>
+
+<button pButton type="button" [disabled]="!for.valid" [routerLink]="['/login']" (click)="armazenarDados()" icon="fa-check" label="Concluir"></button>
+
+
+<!--[routerLink]="['/login']"-->

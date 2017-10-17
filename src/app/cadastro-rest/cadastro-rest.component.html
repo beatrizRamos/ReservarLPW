@@ -1,0 +1,7 @@
+<h1>Cadastrar Restaunte</h1>
+<form #f2 ="ngForm" >
+<h3>Nome</h3>
+<input type="text" #nomeRestaurante ="ngModel" [(ngModel)]="restaurante.nome" name="nomeRestaurante"  required/> 
+
+</form>
+<button pButton type="button" [disabled]="!f2.valid" [routerLink]="['/login']" (click)="armazenarRestaurante()" icon="fa-check" label="Concluir"></button>

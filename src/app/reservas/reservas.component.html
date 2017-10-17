@@ -1,0 +1,58 @@
+
+  <router-outlet></router-outlet>
+
+<p-menu #menu popup="popup" [model]="items"></p-menu>
+<button type="button" pButton icon="fa fa-list" label="Menu" (click)="menu.toggle($event)"></button>
+
+<br/>
+<br/>
+
+ 
+<p-dataTable [value]="reservas"  selectionMode="single" [(selection)]="reservaselect" (onRowSelect)="onRowSelect($event)" [paginator]="true" rows="15" [responsive]="true">
+ 
+    <p-header>Reservas realizadas</p-header>
+    <p-column field="nome" header="Cliente" [sortable]="true"></p-column>
+    <p-column field="data" header="Data" [sortable]="true"></p-column>
+    <p-column field="hora" header="Horário" [sortable]="true"></p-column>
+    <p-column field="numeroMesa" header="Numero da Mesa" [sortable]="true"></p-column>
+    <p-column field="status" header="Status" [sortable]="true"></p-column>
+</p-dataTable>
+<p-contextMenu #cm [model]="items"></p-contextMenu>
+
+ 
+<p-dialog header="Detalhes da Reserva" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true">
+    <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="reserva">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="nome">Cliente</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="nome" [(ngModel)]="reserva.nome" /></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="data">Data</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="data" [(ngModel)]="reserva.data" /></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="hora">Horário</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="hora" [(ngModel)]="reserva.hora" /></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="numeroMesa">Numero da mesa</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="color" [(ngModel)]="reserva.numeroMesa" /></div>
+        </div>
+         <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="status">Status</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="color" [(ngModel)]="reserva.status" /></div>
+        </div>
+    </div>
+
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            <button type="button" pButton icon="fa-close" (click)="delete()" label="Delete"></button>
+            <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
+        </div>
+    </p-footer>
+</p-dialog>
+
+<button [routerLink]="['/pesquisa']">voltar</button>
+<br/>
+<br/>
+
