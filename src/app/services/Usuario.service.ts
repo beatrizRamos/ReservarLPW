@@ -17,14 +17,14 @@ export class UsuarioService{
 
 
     this.user1.nome = "bia";
-     this.user1.email = "bia@"
-      this.user1.senha = "123"
+        this.user1.senha = "123"
        this.user1.id = 10;
+       this.user1.tipo = 0;
        
     this.user2.nome = "van";
-     this.user2.email = "van@"
       this.user2.senha = "321"
        this.user2.id = 11;
+       this.user2.tipo = 1;
     
     this.usuarios.push(this.user1);
     this.usuarios.push(this.user2);
@@ -46,8 +46,7 @@ export class UsuarioService{
     }
 
   listAll() {
-		//return this.usuarios;
-	}
+    //return this.usuarios;
+  }
  
 }
-

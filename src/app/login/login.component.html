@@ -1,4 +1,28 @@
-<h1>Login</h1>
+   
+   <div class="ui-g">
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1">
+             <h1>Login</h1>
+
+    </div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+</div>
+
+
+
+
+<div class="ui-g">
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4">
 
 <router-outlet></router-outlet>
 <p-growl [(value)]="msgs"></p-growl>
@@ -12,7 +36,7 @@
 
 <h3>Senha</h3>
 
-<input type="password" senha="ngModel" class="form-control" [(ngModel)]="usuario.senha" name="senha" /> 
+<input type="password" senha="ngModel" class="form-control" [(ngModel)]="usuario.senha" name="senha" required/> 
 
 </form>
 
@@ -24,7 +48,11 @@
 <button pButton type="button" [disabled]="!f2.valid" (click)="fazerlogin()" label="Entrar"></button>
 <br>
 <br>
-<button [routerLink]="['/cadastrar']" > Cadastre-se </button> 
+<h5> Clique aqui para
+<a class="btn btn-success" [routerLink]="['/cadastrar']"> Cadastra-se</a>
+</h5>
+<a class="btn btn-success" [routerLink]="['/cadastro-rest']">Cadastra um restaurante</a>
 
-<button [routerLink]="['/cadastro-rest']" > Cadastre um restaurante </button> 
-
+    </div>
+    <div class="ui-g-4"></div>
+</div>

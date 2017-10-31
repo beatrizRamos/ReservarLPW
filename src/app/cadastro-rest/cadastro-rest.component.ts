@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Restaurante } from './../models/Restaurante';
-import {RestauranteService} from './../services/Restaurante.service'
+import { Usuario } from './../models/Usuario';
+
+
+import {UsuarioService} from './../services/Usuario.service'
 
 @Component({
   selector: 'app-cadastro-rest',
@@ -8,18 +10,24 @@ import {RestauranteService} from './../services/Restaurante.service'
   styleUrls: ['./cadastro-rest.component.css']
 })
 
+
 export class CadastroRestComponent implements OnInit {
 
-restaurante: Restaurante = new Restaurante();
+   usuario:Usuario = new Usuario();
+  
 
-  constructor(private restauranteservice: RestauranteService) { }
+ constructor(private usuarioService: UsuarioService) { }
+ 
 
-armazenarRestaurante(){
-    this.restauranteservice.insert(this.restaurante);
-  }
+  cadastrar(){
+    this.usuario.tipo = 1;
+    this.usuarioService.insert(this.usuario);
+    
+  }  
 
   ngOnInit() {
-     this.restaurante = new Restaurante();
+    this.usuario = new Usuario();
+   
   }
 
 }

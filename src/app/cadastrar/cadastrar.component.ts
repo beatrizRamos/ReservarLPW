@@ -21,6 +21,7 @@ export class CadastrarComponent implements OnInit {
  
 
   armazenarDados(){
+    this.usuario.tipo = 0;
     this.usuarioService.insert(this.usuario);
     
   }  

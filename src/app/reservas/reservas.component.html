@@ -40,7 +40,12 @@
         </div>
          <div class="ui-grid-row">
             <div class="ui-grid-col-4"><label for="status">Status</label></div>
-            <div class="ui-grid-col-8"><input pInputText id="color" [(ngModel)]="reserva.status" /></div>
+            <div class="ui-grid-col-8" id="color" > </div>
+            <select [(ngModel)]="reserva.status" name="tela" required>
+                        <option value="Presente">Presente</option>
+                        <option value="Ausente" >Ausente</option>
+                        <option value="Cancelado" selected >Cancelado</option>
+  </select>
         </div>
     </div>
 
@@ -51,8 +56,7 @@
         </div>
     </p-footer>
 </p-dialog>
-
-<button [routerLink]="['/pesquisa']">voltar</button>
+<button pButton type="button" [routerLink]="['/pesquisa']" label="Voltar"></button>
 <br/>
 <br/>
 

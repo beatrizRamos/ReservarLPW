@@ -1,19 +1,11 @@
-<h1>Pesquise Restaurantes </h1>
+<div class="ui-g">
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4">
+</div>
+    <div class="ui-g-4"></div>
+</div>
 
 <router-outlet></router-outlet>
 
-<p-menu #menu popup="popup" [model]="items"></p-menu>
-<button type="button" pButton icon="fa fa-list" label="Menu" (click)="menu.toggle($event)"></button>
+<button pButton type="button" [routerLink]="['/reservas']"  label="Fazer Reserva"></button>
 
-<form >
-<input type="text"  name="name" /> 
-<button (click)="pesquisar()">OK</button>
-</form>
-
-<p-dataTable [value]="reservas" [loading]="true">
-    <p-header>Restaurantes</p-header>
-    <p-column field="nome" header="Restaurante"></p-column>
-</p-dataTable>
-
-
-<button [routerLink]="['/login']">Sair</button>
