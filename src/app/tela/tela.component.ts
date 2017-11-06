@@ -16,7 +16,7 @@ export class TelaComponent implements OnInit {
 
   //reservaService: ReservaService;
   reserva:Reserva = new Reserva();
-  restaurante: Restaurante  = new Reserva();
+  restaurante: Restaurante  = new Restaurante();
  msgs: Message[] = [];
   constructor(private reservaService: ReservaService){    
     //this.reservaService = new ReservaService ();  

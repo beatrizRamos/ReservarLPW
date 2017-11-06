@@ -18,17 +18,7 @@ restaurante1 : Restaurante = new Restaurante();
 
   constructor() {
 
-    this.restaurante1.nome = "kitnet"; 
-    this.res2.nome ="vaca";
-    this.res3.nome ="toca";
-
-     this.restaurante1.id = 22; 
-    this.res2.id = 23;
-    this.res3.id = 24;
-
-    this.restaurantes.push(this.restaurante1);
-    this.restaurantes.push(this.res2);
-    this.restaurantes.push(this.res3);
+   
    }
 
  insert(restaurante:Restaurante){
