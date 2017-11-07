@@ -34,8 +34,8 @@ export class ReservasComponent implements OnInit {
       this.reservas = this.reservaService.listAll();
 
         this.items = [
-                    {label: 'New', icon: 'fa-plus', routerLink :'/tela'},
-                    {label: 'Open', icon: 'fa-download' , routerLink :'/reservas'}
+                    {label: 'Nova Reserva', icon: 'fa-plus', routerLink :'/tela'},
+                    {label: 'Listar', icon: 'fa-download' , routerLink :'/reservas'}
                 ];
     }
 

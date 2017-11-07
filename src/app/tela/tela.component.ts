@@ -4,6 +4,7 @@ import { Reserva } from './../models/Reserva';
 import {Message} from 'primeng/components/common/api';
 import { Component, OnInit } from '@angular/core';
 import {ReservaService} from './../services/Reserva.service'
+import { AutenticaService } from "../services/Autentica.service";
 
 
 @Component({
@@ -18,7 +19,7 @@ export class TelaComponent implements OnInit {
   reserva:Reserva = new Reserva();
   restaurante: Restaurante  = new Restaurante();
  msgs: Message[] = [];
-  constructor(private reservaService: ReservaService){    
+  constructor(private reservaService: ReservaService, private autenticaService:AutenticaService){    
     //this.reservaService = new ReservaService ();  
 }
 
@@ -29,6 +30,7 @@ export class TelaComponent implements OnInit {
 
   armazenaDados(){
     this.showSuccess();
+    this.reserva.userId = this.autenticaService.userLogado.id;
     this.reservaService.insert(this.reserva);
     
     

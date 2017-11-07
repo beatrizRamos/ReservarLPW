@@ -6,6 +6,6 @@ export class Reserva{
     hora: String;
     restaurante:Restaurante;
     numeroMesa: number;
-    id: number;
+    userId: number;
     status:String;
 }

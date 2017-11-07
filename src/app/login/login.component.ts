@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   msgs: Message[] = [];
 
-  constructor(private autenticaService: AutenticaService, private router: Router) { }
+  constructor(private autenticaService: AutenticaService, private router: Router, private usuarioService: UsuarioService) { }
 
   showError() {
     this.msgs = [];
@@ -34,9 +34,13 @@ export class LoginComponent implements OnInit {
   fazerlogin() {
     let ok: boolean = false;
     ok = this.autenticaService.logar(this.usuario);
+
     if (ok == true) {
       this.router.navigate(['/pesquisa']);
+      //this.autenticaService.redirecionarTelaInicial();
+
     }
+
     else if (ok == false) {
       this.showError()
     }
