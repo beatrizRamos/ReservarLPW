@@ -4,8 +4,7 @@ import { Usuario } from './../models/Usuario';
 @Injectable()
 
 export class UsuarioService{
-
-
+    
         usuarios:Usuario[] = [];
  ids: number []= [];
    controlador = 0;
@@ -13,7 +12,6 @@ export class UsuarioService{
     user1 : Usuario = new Usuario();
     user2 : Usuario = new Usuario();
 
-     userLogado : Usuario = new Usuario();
 
   constructor() {
 
@@ -43,10 +41,12 @@ export class UsuarioService{
 
     usuario.id = this.controlador; 
     
-    //alert(usuario.tipo);
+    alert(usuario.id);
     this.usuarios.push(usuario);
+    }
+
+  listAll() {
+    //return this.usuarios;
   }
-  
- 
  
 }

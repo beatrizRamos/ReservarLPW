@@ -6,6 +6,7 @@ import {CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CadastroRestComponent } from './cadastro-rest/cadastro-rest.component';
 import {PesquisaComponent } from './pesquisa/pesquisa.component';
 import {ModuleWithProviders} from '@angular/core'
+import { InicialResComponent } from "./inicial-res/inicial-res.component";
 
 
 
@@ -17,6 +18,7 @@ const APP_ROTAS:Routes = [
     {path: 'pesquisa' , component: PesquisaComponent},
     {path: 'cadastro-rest' , component: CadastroRestComponent},
     {path: '' , component: LoginComponent},
+    {path: 'inicial-res' , component: InicialResComponent},
     
 ];
 

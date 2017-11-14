@@ -32,6 +32,7 @@ import {PasswordModule} from 'primeng/primeng';
 import {InputTextModule} from 'primeng/primeng';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InicialResComponent } from './inicial-res/inicial-res.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PesquisaComponent,
     CadastrarComponent,
     CadastroRestComponent,
+    InicialResComponent,
  
   ],
 

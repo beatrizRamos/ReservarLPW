@@ -19,7 +19,7 @@ export class TelaComponent implements OnInit {
   reserva:Reserva = new Reserva();
   restaurante: Restaurante  = new Restaurante();
  msgs: Message[] = [];
-  constructor(private reservaService: ReservaService, private autenticaService:AutenticaService){    
+  constructor(private reservaService: ReservaService, private autenticaService: AutenticaService){    
     //this.reservaService = new ReservaService ();  
 }
 
@@ -30,7 +30,9 @@ export class TelaComponent implements OnInit {
 
   armazenaDados(){
     this.showSuccess();
-    this.reserva.userId = this.autenticaService.userLogado.id;
+    alert(this.autenticaService.userLogado.tipo);
+    this.reserva.idUser = this.autenticaService.userLogado.id;
+    alert(this.reserva.idUser);
     this.reservaService.insert(this.reserva);
     
     
@@ -40,8 +42,8 @@ export class TelaComponent implements OnInit {
   ngOnInit() {
   
         this.items = [
-                    {label: 'New', icon: 'fa-plus', routerLink :'/tela'},
-                    {label: 'Open', icon: 'fa-download' , routerLink :'/reservas'}
+                    {label: 'Nova Reserva ', icon: 'fa-plus', routerLink :'/tela'},
+                    {label: 'Listar', icon: 'fa-download' , routerLink :'/reservas'}
                 ];
   }
 

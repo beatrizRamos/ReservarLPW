@@ -14,6 +14,7 @@
     <p-column field="nome" header="Cliente" [sortable]="true"></p-column>
     <p-column field="data" header="Data" [sortable]="true"></p-column>
     <p-column field="hora" header="Horário" [sortable]="true"></p-column>
+    <p-column field="numeroMesa" header="Numero da Mesa" [sortable]="true"></p-column>
     <p-column field="status" header="Status" [sortable]="true"></p-column>
 </p-dataTable>
 <p-contextMenu #cm [model]="items"></p-contextMenu>
@@ -32,6 +33,10 @@
         <div class="ui-grid-row">
             <div class="ui-grid-col-4"><label for="hora">Horário</label></div>
             <div class="ui-grid-col-8"><input pInputText id="hora" [(ngModel)]="reserva.hora" /></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="numeroMesa">Numero da mesa</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="color" [(ngModel)]="reserva.numeroMesa" /></div>
         </div>
          <div class="ui-grid-row">
             <div class="ui-grid-col-4"><label for="status">Status</label></div>

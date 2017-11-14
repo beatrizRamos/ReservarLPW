@@ -5,7 +5,7 @@ export class Reserva{
     data:String;
     hora: String;
     restaurante:Restaurante;
-    numeroMesa: number;
-    userId: number;
+    idUser: number;
+    id: number;
     status:String;
 }

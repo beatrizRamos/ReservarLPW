@@ -20,32 +20,34 @@ export class LoginComponent implements OnInit {
 
   msgs: Message[] = [];
 
-  constructor(private autenticaService: AutenticaService, private router: Router, private usuarioService: UsuarioService) { }
+  constructor(private autenticaService: AutenticaService, private router: Router) { }
 
   showError() {
     this.msgs = [];
     this.msgs.push({ severity: 'error', summary: 'ERRO', detail: 'user ou senha incorretos' });
   }
 
-
-  ngOnInit() {
-  }
-
-  fazerlogin() {
+fazerlogin() {
     let ok: boolean = false;
     ok = this.autenticaService.logar(this.usuario);
-
-    if (ok == true) {
+    if (ok == true && this.autenticaService.userLogado.tipo == 0) {
       this.router.navigate(['/pesquisa']);
-      //this.autenticaService.redirecionarTelaInicial();
-
     }
 
+     else if (ok == true && this.autenticaService.userLogado.tipo == 1) {
+      this.router.navigate(['/inicial-res']);
+    }
     else if (ok == false) {
       this.showError()
     }
 
   }
+
+
+  ngOnInit() {
+  }
+
+  
 
 
 }

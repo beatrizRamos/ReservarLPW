@@ -1,0 +1,51 @@
+<div class="ui-g">
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1">
+       <h2>Cadastre um Restaurante em nosso sistema =D !</h2>
+    </div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1"></div>
+</div>
+
+
+<div class="ui-g">
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4">
+        <router-outlet></router-outlet>
+
+<form #Rfor ="ngForm" >
+
+<h3>Nome do Restaurante</h3>
+<input type="text" #nomerest ="ngModel" class="form-control" [(ngModel)]="restaurante.nome" name="nome"  required/> 
+<br>
+
+<h3>Cidade</h3>
+
+<input type="password"class="form-control" [(ngModel)]="restaurante.cidade" name="cidade"  required />
+
+<br>
+
+<h3>Endereço</h3>
+<input type="text" #endereco ="ngModel" class="form-control" [(ngModel)]="restaurante.endereco" name="endereco"  required/> 
+<br>
+
+</form>
+
+<br/>
+<br/>
+
+<button pButton type="button" [disabled]="!Rfor.valid" [routerLink]="['/reservas']" (click)="armazenarDados()" icon="fa-check" label="Concluir"></button>
+
+
+<!--[routerLink]="['/login']"-->
+    </div>
+    <div class="ui-g-4"></div>
+</div>
