@@ -32,7 +32,7 @@ export class ReservasComponent implements OnInit {
   items: MenuItem[];
 
   ngOnInit() {
-    this.reservas = this.reservaService.listAll();
+    this.reservas = this.reservaService.myReserva();
 
     this.items = [
       { label: 'Nova Reserva', icon: 'fa-plus', routerLink: '/tela' },

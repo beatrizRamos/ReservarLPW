@@ -30,9 +30,11 @@ import { caminhos } from './app.rotas';
 import { DialogModule} from 'primeng/primeng';
 import {PasswordModule} from 'primeng/primeng';
 import {InputTextModule} from 'primeng/primeng';
+import {DropdownModule} from 'primeng/primeng';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicialResComponent } from './inicial-res/inicial-res.component';
+import { ReserRestComponent } from './reser-rest/reser-rest.component';
 
 
 @NgModule({
@@ -45,6 +47,7 @@ import { InicialResComponent } from './inicial-res/inicial-res.component';
     CadastrarComponent,
     CadastroRestComponent,
     InicialResComponent,
+    ReserRestComponent,
  
   ],
 
@@ -64,6 +67,7 @@ import { InicialResComponent } from './inicial-res/inicial-res.component';
     MenuModule,
     PasswordModule,
     GrowlModule,
+    DropdownModule,
    
   ],
   providers: [ReservaService, UsuarioService, RestauranteService,AutenticaService, MessageService],

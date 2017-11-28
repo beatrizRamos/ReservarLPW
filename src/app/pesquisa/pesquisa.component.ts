@@ -19,12 +19,8 @@ export class PesquisaComponent implements OnInit {
 
    items: MenuItem[];
 
-pesquisar(){
-this.restauranteService.search(this.restaurante);
 
-  }
     ngOnInit() {
-      this.restaurantes = this.restauranteService.retorno();
         this.items = [
                     {label: 'New', icon: 'fa-plus', routerLink :'/tela'},
                     {label: 'Open', icon: 'fa-download' , routerLink :'/reservas'}

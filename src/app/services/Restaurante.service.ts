@@ -8,20 +8,25 @@ export class RestauranteService{
 	ids: number []= [];
    controlador = 0;
 
-restaurante1 : Restaurante = new Restaurante();
    res2: Restaurante = new Restaurante();
    res3 : Restaurante = new Restaurante();
 
-    restaurante : Restaurante = new Restaurante();
-
-    achou : Restaurante [] =[];
-
+  
   constructor() {
+this.res2.nome = "Bebelu";
+this.res2.cidade = "Gus";
+this.res2.endereco = "sao marcos";
+this.res2.idAdim = 11;
 
+this.res3.nome = "Kitkat";
+this.res3.cidade = "Gus";
+this.res3.endereco = "marcos";
+this.res3.idAdim = 11;
    
    }
 
  insert(restaurante:Restaurante){
+   /*
       //qual id?  
       for(var i = 0; i<= this.ids.length; i ++){
           if(this.controlador <= this.ids[i] ){
@@ -30,29 +35,15 @@ restaurante1 : Restaurante = new Restaurante();
           }
     this.ids.push (this.controlador);
 
-    restaurante.id = this.controlador; 
+    restaurante.id = this.controlador; */
     
-    alert(restaurante.nome);
+    
   this.restaurantes.push(restaurante);
- 
+ alert(restaurante.nome);
     }
 
   listAll() {
 		return this.restaurantes;
-	}
-
-  search(rest :Restaurante){
-   for(let i = 0; i < this.restaurantes.length; i++) {
-  if(this.restaurantes[i].nome == rest.nome ) {
-   this.achou.push(this.restaurantes[i]);
-   alert(this.restaurantes[i]); 
- }
-}
-
-  }
-
-retorno() {
-		return this.achou;
 	}
 
  

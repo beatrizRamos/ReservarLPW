@@ -1,6 +1,7 @@
 export class Restaurante{
     nome:String;
-    id: number;
+    idAdim: number;
     cidade: String;
     endereco: String;
+
 }

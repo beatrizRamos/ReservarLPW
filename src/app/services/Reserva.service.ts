@@ -63,11 +63,10 @@ export class ReservaService{
         this.minhasReservas.push(this.reservas[i]);
       }
     }
+    	return this.minhasReservas;
   }
 
-  listAll() {
-		return this.minhasReservas;
-	}
+  
   
   //ajeitar isUser => id
 	delete(reserva: Reserva) {

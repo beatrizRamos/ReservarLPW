@@ -18,7 +18,8 @@ const APP_ROTAS:Routes = [
     {path: 'pesquisa' , component: PesquisaComponent},
     {path: 'cadastro-rest' , component: CadastroRestComponent},
     {path: '' , component: LoginComponent},
-    {path: 'inicial-res' , component: InicialResComponent},
+    {path: 'inicial-res' , component: InicialResComponent},    
+    {path: 'reser-rest' , component: InicialResComponent},
     
 ];
 

@@ -5,6 +5,7 @@ import {Message} from 'primeng/components/common/api';
 import { Component, OnInit } from '@angular/core';
 import {ReservaService} from './../services/Reserva.service'
 import { AutenticaService } from "../services/Autentica.service";
+import {DropdownModule} from 'primeng/primeng';
 
 
 @Component({
